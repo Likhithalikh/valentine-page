@@ -48,17 +48,23 @@
     <div class="container">
         <h1>Will you be my Valentine? 💖</h1>
         <div class="buttons">
-            <button class="yes" onclick="alert('Yay! I knew you\'d say yes! 💕')">Yes</button>
+            <button class="yes" onclick="goToPage()">Yes</button>
+
             <button class="no" onmouseover="moveButton(this)">No</button>
         </div>
     </div>
     <script>
-        function moveButton(button) {
-            let x = Math.random() * (window.innerWidth - 100);
-            let y = Math.random() * (window.innerHeight - 50);
-            button.style.left = x + 'px';
-            button.style.top = y + 'px';
-        }
+       function goToPage() {
+        alert('Yay! I knew you\'d say yes! 💕');
+        window.location.href = "yes.html";  // Redirects to a new page
+    }
+
+    function moveButton(button) {
+        let x = Math.random() * (window.innerWidth - 100);
+        let y = Math.random() * (window.innerHeight - 50);
+        button.style.left = x + 'px';
+        button.style.top = y + 'px';
+    }
     </script>
 </body>
 </html>
